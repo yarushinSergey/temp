@@ -1,0 +1,27 @@
+mat-toolbar span {
+  margin-right: 10px;
+}
+
+.activeLink /deep/ .mat-button-focus-overlay:not(:hover) {
+  opacity: .1;
+  background-color: #fff;
+}
+
+mat-icon:not(:last-child) {
+  margin-right: 5px;
+}
+
+.align-right {
+  width: 100%;
+  text-align: right;
+  margin:0px auto 0px auto;
+}
+
+.align-left_responsive {
+  width: 100%;
+  text-align: left;
+}
+
+.toolbar-hide-rows mat-toolbar-row:not(:first-child) {
+  display: none;
+}

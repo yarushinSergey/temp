@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" fxFlex fxShow="true" fxHide.lt-md="true">
+  <mat-toolbar-row>
+    <span>Open library</span>
+    <button mat-button routerLink="/home" routerLinkActive="activeLink"><span>{{ 'Home.Section' | translate }}</span></button>
+    <button mat-button routerLink="/favourite" routerLinkActive="activeLink" [routerLinkActiveOptions]="{extract: true}"><span>{{ 'FavouriteBooks.Section' | translate }}</span></button>
+    <div class="align-right">
+      <mat-icon class="clickable" svgIcon="flag-ru" (click)="translate.use('ru')"></mat-icon>
+      <mat-icon class="clickable" svgIcon="flag-us" (click)="translate.use('en')"></mat-icon>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar [ngClass]="{'toolbar-hide-rows': hideRows}" color="primary" fxFlex fxShow="true" fxHide.gt-sm="true">
+  <mat-toolbar-row>
+    <span>Open library</span>
+    <div style="width: 100%">
+      <button (click)="menu()" mat-icon-button style="float: right">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <button class="align-left_responsive" mat-button routerLink="/home" routerLinkActive="activeLink">{{ 'Home.Section' | translate }}</button>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <button class="align-left_responsive" mat-button routerLink="/favourite" routerLinkActive="activeLink" [routerLinkActiveOptions]="{extract: true}">{{ 'FavouriteBooks.Section' | translate }}</button>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <mat-icon class="clickable" svgIcon="flag-ru" (click)="translate.use('ru')"></mat-icon>
+    <mat-icon class="clickable" svgIcon="flag-us" (click)="translate.use('en')"></mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>

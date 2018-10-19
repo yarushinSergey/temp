@@ -1,0 +1,26 @@
+{
+  "Paginator": {
+    "ItemsPerPage": "Books per page",
+    "of": "of"
+  },
+  "Home": {
+    "Section": "Home",
+    "Search": "Search",
+    "Columns": "Columns",
+    "Subjects": "Subjects",
+    "Cover": "Thumbnail",
+    "Title": "Title",
+    "PublishDate": "Publish date",
+    "Authors": "Authors",
+    "Publishers": "Publishers"
+  },
+  "Details": {
+    "Published": "Published",
+    "Weight": "Weight",
+    "NewTag": "New tag..."
+  },
+  "FavouriteBooks": {
+    "Section": "Favourite books",
+    "SelectFilter": "Select filter"
+  }
+}

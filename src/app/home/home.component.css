@@ -1,0 +1,22 @@
+.bookTableContainer {
+  position: relative;
+  overflow: auto;
+  max-height: calc(100vh - 196px);
+}
+
+table {
+  width: 100%;
+}
+
+.bookTableFilters {
+  margin-left: 15px;
+}
+
+mat-form-field {
+  width: 33%
+}
+
+.mat-header-cell {
+  width: 150px;
+  padding-right: 3px;
+}

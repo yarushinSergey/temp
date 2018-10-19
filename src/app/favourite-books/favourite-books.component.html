@@ -1,0 +1,14 @@
+<div class="inner-content mat-elevation-z8">
+  <mat-form-field>
+    <mat-select ([value])="selectedTags" placeholder="{{ 'FavouriteBooks.SelectFilter' | translate }}" (selectionChange)="filterByTags($event.value)" multiple>
+      <mat-option *ngFor="let tag of tagList" [value]="tag">{{tag}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-list>
+    <mat-list-item *ngFor="let book of filteredBooks">
+      <a routerLink="/home/details/{{book.getIsbn()}}">
+        {{book.getTitle()}}
+        <span>(<span *ngFor="let tag of book.getTagList(); let isLast = last;">{{tag}}{{isLast ? '' : ', '}}</span>)</span>
+      </a></mat-list-item>
+  </mat-list>
+</div>

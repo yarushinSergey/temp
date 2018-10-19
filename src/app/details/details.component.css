@@ -1,0 +1,30 @@
+.details {
+  overflow: auto;
+  min-height: 475px;
+}
+
+mat-list {
+  width: 100%;
+}
+
+.detail-card-description {
+  padding: 0 16px;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: initial;
+}
+
+ul > {
+  font-color: #aeaeae;
+}
+
+ul > :first-child {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ul > :nth-child(n+3) {
+  height: 48px;
+}

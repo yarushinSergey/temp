@@ -1,0 +1,31 @@
+<div class="details inner-content mat-elevation-z8" *ngIf="book" fxFlex fxLayout="row" fxLayout.lt-md="column">
+  <div fxFlex style="height: 475px; width: 318px;">
+    <img mat-card-image src="{{book.getCover().large}}">
+  </div>
+  <div class="detail-card-description" fxFlex="80">
+    <ul>
+      <li>{{book.getTitle()}}</li>
+      <li [style.font-style]="'italic'">{{book.getSubtitle()}}</li>
+      <li>by {{book.getAuthors()}}</li>
+      <li>{{ 'Details.Published' | translate }} <b>{{book.getPublishDate()}}</b> by {{book.getPublishers()}}</li>
+      <li>{{'Details.Weight' | translate }}: {{book.getWeight()}}</li>
+      <li>Google Books: <a target="_blank" href="https://books.google.ru/books?isbn={{book.getIsbn()}}">{{book.getIsbn()}}</a></li>
+      <li>Amazon Books: <a target="_blank" href="https://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&unfiltered=1&field-isbn={{book.getIsbn()}}">{{book.getIsbn()}}</a></li>
+      <li>
+        <mat-form-field style="width: 100%">
+          <mat-chip-list #tagList>
+            <mat-chip *ngFor="let tag of tags" (removed)="remove(tag)">
+              {{tag}}
+              <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+            <input placeholder="{{ 'Details.NewTag' | translate }}"
+                   [matChipInputFor]="tagList"
+                   [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                   [matChipInputAddOnBlur]="true"
+                   (matChipInputTokenEnd)="addTag($event)">
+          </mat-chip-list>
+        </mat-form-field>
+      </li>
+    </ul>
+  </div>
+</div>
